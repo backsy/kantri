@@ -1,0 +1,79 @@
+.avaleht {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+        ". . . . ."
+        ". a a a ."
+        ". a a a ."
+        ". . . . .";
+    width: 100vw;
+    height: 100vh;
+    background: #222222 url(../../assets/avaleht.jpg) no-repeat top center;
+    background-size: cover;
+}
+.kast {
+    color: white;
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+}
+.ostaNupp {
+    border: 3px solid white;
+    padding: 15px 32px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    outline: none;
+}
+.ostaNupp:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: red;
+    border-color: red;
+}
+.tekst {
+    margin-bottom: 25%;
+}
+@media only screen and (max-height: 400px) {
+    .avaleht {
+        display: grid;
+        grid-template-columns: 1fr 25fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100vw;
+        height: 100vh;
+        background: #222222 url(../../assets/avaleht.jpg) no-repeat top center;
+        background-size: cover;
+    }
+    .kast {
+        color: white;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+    .ostaNupp {
+        grid-row: 2;
+        border: 3px solid white;
+        padding: 15px 32px;
+        border-radius: 8px;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        outline: none;
+    }
+    .ostaNupp:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: red;
+        border-color: red;
+    }
+    .tekst {
+        justify-self: center;
+        max-height: 140px;
+    }
+}

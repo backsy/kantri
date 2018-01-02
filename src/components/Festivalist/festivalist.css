@@ -1,0 +1,39 @@
+.grid-container {
+    padding: 10px;
+    grid-row: 5fr;
+}
+.grid-container img {
+    display: none;
+}
+@media only screen and (min-width: 650px) {  
+    .grid-container img {
+        display: block;
+    }
+    .grid-wrap {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+    }  
+    .festivalist {
+        grid-column: 2/4;
+    }
+    .p1, .p2, .p3, .p4, .p5 {
+        text-align: justify;
+    }
+    .image {
+        display: block;
+        float: right;        
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
+        padding: 10px;
+    }
+}
+/* @media only screen and (min-width: 900px) {
+
+} */
+/* @media only screen and (min-width: 1300px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+    }
+} */
